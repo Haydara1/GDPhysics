@@ -11,7 +11,15 @@ config_version=4
 [application]
 
 config/name="GDPhysics"
+run/main_scene="res://Controls/Scenes/Main.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/fullscreen=true
+window/stretch/mode="viewport"
 
 [physics]
 
