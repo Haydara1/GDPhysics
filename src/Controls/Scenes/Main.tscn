@@ -30,4 +30,5 @@ margin_right = 1175.0
 margin_bottom = 700.0
 text = "EXIT"
 
+[connection signal="pressed" from="NewButton" to="." method="_on_NewButton_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
