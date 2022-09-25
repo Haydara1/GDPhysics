@@ -9,26 +9,32 @@ script = ExtResource( 3 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 1 )]
 
-[node name="NewButton" parent="." instance=ExtResource( 2 )]
+[node name="MouseCamera2D" type="Camera2D" parent="."]
+position = Vector2( 957.134, 541.452 )
+current = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NewButton" parent="CanvasLayer" instance=ExtResource( 2 )]
 margin_left = 750.0
 margin_top = 374.0
 margin_right = 1170.0
 margin_bottom = 450.0
 text = "NEW SIMULATION"
 
-[node name="LoadButton" parent="." instance=ExtResource( 2 )]
+[node name="LoadButton" parent="CanvasLayer" instance=ExtResource( 2 )]
 margin_left = 745.0
 margin_top = 495.0
 margin_right = 1175.0
 margin_bottom = 571.0
 text = "LOAD SIMULATION"
 
-[node name="ExitButton" parent="." instance=ExtResource( 2 )]
+[node name="ExitButton" parent="CanvasLayer" instance=ExtResource( 2 )]
 margin_left = 745.0
 margin_top = 624.0
 margin_right = 1175.0
 margin_bottom = 700.0
 text = "EXIT"
 
-[connection signal="pressed" from="NewButton" to="." method="_on_NewButton_pressed"]
-[connection signal="pressed" from="ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/NewButton" to="." method="_on_NewButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/ExitButton" to="." method="_on_ExitButton_pressed"]
