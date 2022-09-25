@@ -3,8 +3,15 @@ using System;
 
 public class SpringPendulum : Node2D
 {
-	public double spring_constant;
-	public double ball_mass;
+	
+	// Physics variables
+	[Export] public double spring_constant;
+	[Export] public double ball_mass;
+	
+	// Graphics variables
+	[Export] public float radius = 80;
+	[Export] public Vector2 center = new Vector2(200, 200);
+	[Export] public Color color = new Color(1, 0, 0);
 
 	public override void _Ready()
 	{
@@ -13,10 +20,7 @@ public class SpringPendulum : Node2D
 	
 	public override void _Draw()
 	{
-		var center = new Vector2(200, 200);
-		float radius = 80;
-		var color = new Color(1, 0, 0);
-		DrawCircle(center, radius, color);
+		DrawCircle(this.center, this.radius, this.color);
 	}
 
 //  // Called every frame. 'delta' is the elapsed time since the previous frame.
